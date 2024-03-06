@@ -2,7 +2,7 @@ import java.net.*;
 import  java.io.*;
 
 class RequestProcessor extends Thread {
-    private Socket socket;
+    private final Socket socket;
     RequestProcessor(Socket socket) {
         this.socket = socket;
         start();
@@ -72,7 +72,7 @@ class RequestProcessor extends Thread {
 
 public class Server {
     private ServerSocket serverSocket;
-    private int portNumber;
+    private final int portNumber;
 
     Server(int portNumber) {
         this.portNumber = portNumber;
